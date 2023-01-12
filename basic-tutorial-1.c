@@ -1,7 +1,6 @@
 #include <gst/gst.h>
 
-int
-main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
   GstElement *pipeline;
   GstBus *bus;
@@ -18,7 +17,7 @@ main (int argc, char *argv[])
 
   /* Start playing */
   gst_element_set_state (pipeline, GST_STATE_PLAYING);
-
+  
   /* Wait until error or EOS */
   bus = gst_element_get_bus (pipeline);
   msg =
